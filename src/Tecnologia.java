@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Tecnologia extends Producto{
 
     private String fabricante;
@@ -10,6 +12,44 @@ public class Tecnologia extends Producto{
     }
 
     public Tecnologia() {
+    }
+
+    @Override
+    public void ingresarProducto() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingrese el nombre del producto");
+        this.nombre=sc.next();
+        System.out.println("Ingrese el precio del producto");
+        this.precio=sc.nextDouble();
+        System.out.println("Ingrese el código del producto");
+        this.codigo=sc.next();
+        System.out.println("Ingrese el cantidad del producto");
+        this.cantidad=sc.nextInt();
+        System.out.println("Ingrese marca del producto");
+        this.marca=sc.next();
+        System.out.println("Ingrese el fabricante del producto");
+        this.fabricante=sc.next();
+        System.out.println("Ingrese el voltaje del producto");
+        this.voltaje=sc.nextDouble();
+    }
+
+    @Override
+    public void imprimirProducto(){
+        System.out.println("EL producto tecnológico tiene las siguientes características");
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("Precio: "+this.precio);
+        System.out.println("Código: "+this.codigo);
+        System.out.println("Cantidad: "+this.cantidad);
+        System.out.println("Marca: "+this.marca);
+        System.out.println("Fabricante: "+this.fabricante);
+        System.out.println("Voltaje: "+this.voltaje);
+
+    }
+
+    public void comprarProductoTecnologico(){
+        if(this.verificarStock()){
+            System.out.println("Se puede proceder con la compra");
+        }
     }
 
     public String getFabricante() {

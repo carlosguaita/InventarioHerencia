@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Producto {
+public abstract class Producto {
 
     String nombre;
     double precio;
@@ -23,6 +23,15 @@ public class Producto {
     public Producto() {
     }
 
+    public boolean verificarStock(){
+        if (cantidad==0){
+            System.out.println("No existe stock");
+            return false;
+        }
+        return true;
+    }
+
+/*
     public void ingresarProducto(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el nombre del producto");
@@ -35,4 +44,10 @@ public class Producto {
         this.cantidad=sc.nextInt();
     }
 
+ */
+
+    public abstract void ingresarProducto();
+
+
+    public abstract void imprimirProducto();
 }
