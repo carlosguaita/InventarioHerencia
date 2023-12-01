@@ -12,6 +12,8 @@ public class Main {
         Tecnologia tecnologia1 = new Tecnologia("tecnologia","Laptop",600,"P0002",100,"HP","HP",110);
         Electrodomestico electro1 = new Electrodomestico("electro","Cocina",250,"P0003",100,"Mabe","Mabe",110,2);
 
+
+
         listaProductos.add(alimento1);
         listaProductos.add(tecnologia1);
         listaProductos.add(electro1);

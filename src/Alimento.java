@@ -38,6 +38,24 @@ public class Alimento extends Producto{
         this.fechaElaboracion=sc.next();
         System.out.println("Ingrese fecha de expiración del producto");
         this.fechaExpiracion=sc.next();
+
+    }
+    @Override
+    public void imprimirProducto(){
+        System.out.println("EL producto tecnológico tiene las siguientes características");
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("Precio: "+this.precio);
+        System.out.println("Código: "+this.codigo);
+        System.out.println("Cantidad: "+this.cantidad);
+        System.out.println("Marca: "+this.marca);
+        System.out.println("Fecha elaboracion: "+this.fechaElaboracion);
+        System.out.println("Fecha Expiracion: "+this.fechaExpiracion);
+        int i=0;
+        for (String ingrediente : ingredientes){
+            System.out.println("Ingrediente "+i+" "+ingrediente);
+            i++;
+        }
+
     }
 
 
